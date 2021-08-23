@@ -5,6 +5,7 @@ import ButtonAppBar from './components/NavBar';
 import ScoreBar from './components/ScoreBar';
 import { getDarkModePreference } from './store/app';
 import { useSelector } from 'react-redux';
+import SnackBarAlert from './components/SnackBarAlert';
 
 export default function App() {
 
@@ -29,8 +30,8 @@ export default function App() {
               <Typography variant='caption'>Reply to the below questions and get your score for Australian skill visa program.</Typography>
             </Alert>
           </Box>
-
           <CategoriesTabs />
+          <SnackBarAlert />
         </Container>
       </React.StrictMode>
     </ThemeProvider>

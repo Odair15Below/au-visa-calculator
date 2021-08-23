@@ -5,6 +5,7 @@ const initialState = {
     darkMode: isDarkMode,
     data: quiz_data,
     selectedTabIndex: 0,
+    alertMessage: '',
     scoreBoard: {
         points: 0,
         selectedOptions: {}
@@ -27,15 +28,20 @@ export function appReducer(state = initialState, action) {
                 return accumulator += newSelectedOptions[value].points;
             }, 0);
 
+            let message = action.payload.points > 0 ? `${action.payload.points} points added to your total score` : '';
+
             return {
                 ...state,
                 selectedTabIndex: newSelectedTabIndex,
-                scoreBoard: { ...state.scoreBoard, points: newTotal, selectedOptions: newSelectedOptions }
+                scoreBoard: { ...state.scoreBoard, points: newTotal, selectedOptions: newSelectedOptions },
+                alertMessage: message
             }
         case DARKMODE_CHANGED:
             return { ...state, darkMode: action.payload };
         case SELECTEDCATEGORYTAB_CHANGED:
             return { ...state, selectedTabIndex: action.payload };
+        case ALERTMESSAGE_CLOSED:
+            return { ...state, alertMessage: '' };
         default:
             return state;
     }
@@ -47,11 +53,13 @@ export const getData = (state) => state.app.data;
 export const getDarkModePreference = (state) => state.app.darkMode;
 export const getSelectedOptions = (state) => state.app.scoreBoard.selectedOptions;
 export const getSelectedTabIndex = (state) => state.app.selectedTabIndex;
+export const getAlertMessage = (state) => state.app.alertMessage;
 
 // action types
 export const OPTION_CHANGED = "app/optionChanged";
 export const DARKMODE_CHANGED = "app/darkModeChanged";
 export const SELECTEDCATEGORYTAB_CHANGED = "app/selectedCategoryTabChanged";
+export const ALERTMESSAGE_CLOSED = "app/AlertMessageClosed";
 
 // action creators
 export const selectOption = (option) => ({
@@ -67,4 +75,8 @@ export const changeDarkMode = (isDarkMode) => ({
 export const changeSelectedCategoryTab = (newSelectedTabIndex) => ({
     type: SELECTEDCATEGORYTAB_CHANGED,
     payload: newSelectedTabIndex
+});
+
+export const closeAlertMessage = () => ({
+    type: ALERTMESSAGE_CLOSED
 });
