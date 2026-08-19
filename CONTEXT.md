@@ -23,7 +23,7 @@ Short, non-scoring descriptions of skilled visas outside 189 / 190 / 491, so the
 _Avoid_: scoring those visas, treating CSOL as the 189 occupation list
 
 **Home Affairs Snapshot**:
-A dated encoding of the official Points Test table. The app does not fetch live rules.
+A dated encoding of the official Points Test table (this app: 16 July 2026). The app does not fetch live rules.
 _Avoid_: live Home Affairs feed, always-current calculator
 
 ### Points Test
@@ -84,3 +84,7 @@ Skilled Nominated — permanent, state or territory nomination, five Nomination 
 
 **Subclass 491**:
 Skilled Work Regional (Provisional) — provisional, state/territory nomination or eligible family sponsorship, fifteen Nomination Points.
+
+## Decisions
+
+See `docs/adr/` for why this app uses a Home Affairs Snapshot, scores only 189 / 190 / 491, shows three Pathway Scores from one quiz, and displays Awarded Points rather than Claimed Points.
