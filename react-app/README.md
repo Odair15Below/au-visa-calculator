@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# AU visa Points Estimate
+
+Client-side Points Estimate for Australian SkillSelect subclasses **189 / 190 / 491**. One quiz produces three Pathway Scores (Awarded Points) from a dated Home Affairs Snapshot of Schedule 6D.
+
+- Domain language: [`CONTEXT.md`](../CONTEXT.md)
+- Decisions: [`docs/adr/`](../docs/adr/)
+- Scoring: `src/scoring/pointsTest.js` (run `npm test` in `react-app`)
+
+Not migration advice. Confirm the table against Home Affairs before lodging an EOI.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
