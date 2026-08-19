@@ -5,6 +5,7 @@ Client-side Points Estimate for Australian SkillSelect subclasses **189 / 190 / 
 - Domain language: [`CONTEXT.md`](../CONTEXT.md)
 - Decisions: [`docs/adr/`](../docs/adr/)
 - Scoring: `src/scoring/pointsTest.js` (run `npm test` in `react-app`)
+- Deploy: push or merge to **`master`**. GitHub Actions publishes `react-app/build` to GitHub Pages. Do not treat `main` as the app branch.
 
 Not migration advice. Confirm the table against Home Affairs before lodging an EOI.
 

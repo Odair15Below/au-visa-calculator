@@ -1,4 +1,4 @@
-name: Build & deploy (master)
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -8,6 +8,10 @@ on:
     branches:
       - master
   workflow_dispatch:
+
+concurrency:
+  group: github-pages-master
+  cancel-in-progress: true
 
 permissions:
   contents: write
