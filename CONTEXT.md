@@ -1,13 +1,13 @@
 # Australian Skilled Visa Points Estimate
 
-A client-side quiz that estimates a Total Score under the Points Test for subclasses 189, 190, and 491.
+A client-side quiz that estimates Pathway Scores under the Points Test for subclasses 189, 190, and 491.
 
 ## Language
 
 ### Product
 
 **Points Estimate**:
-A Total Score claimed from the Points Test, shown against the EOI Floor. It is not a visa grant, an invitation, or legal advice.
+Pathway Scores claimed from one set of Points Category answers, each shown against the EOI Floor. It is not a visa grant, an invitation, or legal advice.
 _Avoid_: PR calculator as a promise, eligibility result, invitation result
 
 **Eligibility Check**:
@@ -19,7 +19,8 @@ Guidance drawn from SkillSelect invitation rounds about competitive scores. Road
 _Avoid_: invitation threshold, pass mark (those are not the EOI Floor)
 
 **Visa Overview**:
-Short, non-scoring descriptions of skilled visas outside 189 / 190 / 491, so they are not confused with the Points Test.
+Short, non-scoring descriptions of skilled visas outside 189 / 190 / 491, so they are not confused with the Points Test. Roadmap; when built it covers 482, 186, 485, 191, 494, 407, and 887.
+_Avoid_: scoring those visas, treating CSOL as the 189 occupation list
 
 **Home Affairs Snapshot**:
 A dated encoding of the official Points Test table. The app does not fetch live rules.
@@ -38,11 +39,16 @@ One factor in the Points Test from which the applicant picks a single option (Ag
 The 65-point minimum required to lodge an Expression of Interest. Not the score needed to receive an invitation.
 _Avoid_: invitation threshold, minimum to migrate, pass mark
 
+**Pathway Scores**:
+The three results from one quiz: Subclass 189, 190, and 491. They differ only by Nomination Points.
+_Avoid_: making the applicant pick a subclass before seeing a score
+
 **Total Score**:
-The sum of points from each Points Category after official caps and Nomination Points.
+The points for one subclass: personal Points Category picks plus that subclass's Nomination Points.
+_Avoid_: a single number that pretends 189, 190, and 491 are the same
 
 **Nomination Points**:
-Points attached to the chosen subclass: 189 = 0, 190 = +5, 491 = +15.
+Points attached to a subclass: 189 = 0, 190 = +5, 491 = +15. Not a quiz option the applicant picks.
 _Avoid_: visa subclass points as if every subclass were +5
 
 **Combined Employment Cap**:
