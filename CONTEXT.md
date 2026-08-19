@@ -7,7 +7,7 @@ A client-side quiz that estimates Pathway Scores under the Points Test for subcl
 ### Product
 
 **Points Estimate**:
-Pathway Scores claimed from one set of Points Category answers, each shown against the EOI Floor. It is not a visa grant, an invitation, or legal advice.
+Pathway Scores computed from one set of Points Category answers, each shown against the EOI Floor. It is not a visa grant, an invitation, or legal advice.
 _Avoid_: PR calculator as a promise, eligibility result, invitation result
 
 **Eligibility Check**:
