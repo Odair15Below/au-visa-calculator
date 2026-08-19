@@ -40,11 +40,23 @@ The 65-point minimum required to lodge an Expression of Interest. Not the score 
 _Avoid_: invitation threshold, minimum to migrate, pass mark
 
 **Pathway Scores**:
-The three results from one quiz: Subclass 189, 190, and 491. They differ only by Nomination Points.
+The three results from one quiz: Subclass 189, 190, and 491. They differ only by Nomination Points. Each is Awarded Points, not Claimed Points.
 _Avoid_: making the applicant pick a subclass before seeing a score
 
+**Pathway Notes**:
+Short non-scoring text under each Pathway Score (occupation lists, nomination or family sponsorship). Not an Eligibility Check.
+_Avoid_: occupation search, skills-assessment result
+
+**Awarded Points**:
+What Schedule 6D actually gives: Combined Employment Cap applied, Regional Study zero unless the Australian Study Requirement is met, Nomination Points 0 / 5 / 15.
+_Avoid_: trusting the raw radio values as the Total Score
+
+**Claimed Points**:
+What the applicant picked before caps and prerequisites. Shown only to explain a warning, never as a Pathway Score.
+_Avoid_: using claimed as “your points”
+
 **Total Score**:
-The points for one subclass: personal Points Category picks plus that subclass's Nomination Points.
+The Awarded Points for one subclass: personal Points Category awards plus that subclass's Nomination Points.
 _Avoid_: a single number that pretends 189, 190, and 491 are the same
 
 **Nomination Points**:
@@ -52,10 +64,10 @@ Points attached to a subclass: 189 = 0, 190 = +5, 491 = +15. Not a quiz option t
 _Avoid_: visa subclass points as if every subclass were +5
 
 **Combined Employment Cap**:
-The maximum of 20 points from Overseas Skilled Employment and Australian Skilled Employment together.
+The maximum of 20 Awarded Points from Overseas Skilled Employment and Australian Skilled Employment together. Extra Claimed Points are discarded from the Total Score and explained.
 
 **Regional Study**:
-Five extra points for meeting the Australian Study Requirement at a campus in a designated regional area.
+Five extra Awarded Points for meeting the Australian Study Requirement at a campus in a designated regional area. If Australian Study is No, Regional Study is awarded 0 even if claimed.
 _Avoid_: treating regional study as the same as the Australian Study Requirement
 
 **Australian Study Requirement**:
