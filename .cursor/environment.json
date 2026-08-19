@@ -1,0 +1,10 @@
+{
+  "name": "au-visa-calculator",
+  "install": "cd react-app && npm ci",
+  "terminals": [
+    {
+      "name": "react-dev-server",
+      "command": "cd react-app && BROWSER=none NODE_OPTIONS=--openssl-legacy-provider npm start"
+    }
+  ]
+}
