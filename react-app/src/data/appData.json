@@ -1,34 +1,5 @@
 [
     {
-        "category": "Visa Subclass",
-        "headLineQuestion": "Which visa Subclass are you applying for?",
-        "options": [
-            {
-                "description": "Skilled Independent visa Subclass 189",
-                "requirements": [
-                    {"description": "You must have an occupation on the MLTSSL." }
-                ],
-                "points": 5
-            },
-            {
-                "description": "Skilled Nominated visa Subclass 190",
-                "requirements": [
-                    {"description": "Requires nomination by a State or Territory government." },
-                    {"description": "You must have an occupation on the MLTSSL or STSOL." }
-                ],
-                "points": 5
-            },
-            {
-                "description": "Skilled Work Regional (Provisional) visa Subclass 491",
-                "requirements": [
-                    {"description": "Requires nomination by a State or Territory government, or sponsorship by a suitable family member." },
-                    {"description": "You must have an occupation on the MLTSSL or STSOL or ROL." }                    
-                ],
-                "points": 5
-            }
-        ]
-    },
-    {
         "category": "Age",
         "headLineQuestion": "Your age at the time of invitation to apply for the visa.",
         "options": [
@@ -47,6 +18,10 @@
             {
                 "description": "40 to 44",
                 "points": 15
+            },
+            {
+                "description": "45 or over (usually not invitable for 189, 190, or 491)",
+                "points": 0
             }
         ]
     },
@@ -151,7 +126,7 @@
         ],
         "requirements": [
             "For the employment to be counted it must be at least 20 hours per week for remuneration",
-            "The maximum points that can be awarded for 'Overseas Work Experience' and 'Australian Work Experience' combined, is 20 points"
+            "The maximum Awarded Points for Overseas and Australian skilled employment combined is 20 (Combined Employment Cap)"
         ]
     },
     {
@@ -175,12 +150,12 @@
                 "points": 5
             },
             {
-                "description": "Less than 3 years",
+                "description": "Less than 1 year",
                 "points": 0
             }
         ],
         "requirements": [
-            "The maximum points that can be awarded for 'Overseas Work Experience' and 'Australian Work Experience' combined, is 20 points"
+            "The maximum Awarded Points for Overseas and Australian skilled employment combined is 20 (Combined Employment Cap)"
         ]
     },
     {
@@ -192,7 +167,7 @@
                 "points": 20
             },
             {
-                "description": "A Bachelor degree from an Australian educational institution or a Bachelor qualification, from another educational institution that is of a recognised standard",
+                "description": "A Bachelor or Masters degree from an Australian educational institution, or a Bachelor or Masters qualification from another educational institution that is of a recognised standard",
                 "points": 15
             },
             {
@@ -206,8 +181,22 @@
         ]
     },
     {
-        "category": "Australian Educational Qualification",
-        "headLineQuestion": "Degree, diploma, advanced diploma or trade qualification from an Australian educational institution which took at least 2 years of full-time study and was taught in English.",
+        "category": "Australian Study Requirement",
+        "headLineQuestion": "Degree, diploma, advanced diploma or trade qualification from an Australian educational institution which took at least 2 academic years of full-time study and was taught in English.",
+        "options": [
+            {
+                "description": "Yes",
+                "points": 5
+            },
+            {
+                "description": "No",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "category": "Regional Study",
+        "headLineQuestion": "Did you meet the Australian Study Requirement by studying at a campus in a designated regional area of Australia (and living in that area while studying)?",
         "options": [
             {
                 "description": "Yes",

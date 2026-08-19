@@ -6,6 +6,7 @@ import ScoreBar from './components/ScoreBar';
 import { getDarkModePreference } from './store/app';
 import { useSelector } from 'react-redux';
 import SnackBarAlert from './components/SnackBarAlert';
+import { HOME_AFFAIRS_SNAPSHOT } from './scoring/snapshot';
 
 export default function App() {
 
@@ -27,11 +28,17 @@ export default function App() {
           <ScoreBar />
           <Box m={2} >
             <Alert severity="info" m='2' >
-              <Typography variant='caption'>Reply to the below questions and get your score for Australian skill visa program.</Typography>
+              <Typography variant='caption'>Answer each Points Category. Pathway Scores for 189, 190, and 491 are Awarded Points from a Home Affairs Snapshot — not an invitation or visa grant.</Typography>
             </Alert>
           </Box>
           <CategoriesTabs />
           <SnackBarAlert />
+          <Box m={2} mb={4}>
+            <Typography variant='caption' color='text.secondary'>
+              Not migration advice. Points Test as at {HOME_AFFAIRS_SNAPSHOT.asAt} ({HOME_AFFAIRS_SNAPSHOT.source}). Confirm against{' '}
+              <a href={HOME_AFFAIRS_SNAPSHOT.sourceUrl}>Home Affairs</a> before you lodge an EOI.
+            </Typography>
+          </Box>
         </Container>
       </React.StrictMode>
     </ThemeProvider>

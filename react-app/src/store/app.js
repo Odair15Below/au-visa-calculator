@@ -1,5 +1,11 @@
-let quiz_data = require('../data/appData.json');
-const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+import quiz_data from '../data/appData.json';
+import { alertMessageForSelection, scorePointsTest } from '../scoring/pointsTest';
+
+const isDarkMode = typeof window !== 'undefined'
+    && window.matchMedia
+    && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const emptyScore = scorePointsTest({});
 
 const initialState = {
     darkMode: isDarkMode,
@@ -7,35 +13,42 @@ const initialState = {
     selectedTabIndex: 0,
     alertMessage: '',
     scoreBoard: {
-        points: 0,
+        points: emptyScore.pathwayScores[189],
+        pathwayScores: emptyScore.pathwayScores,
+        warnings: emptyScore.warnings,
         selectedOptions: {}
     }
 };
 
 export function appReducer(state = initialState, action) {
     switch (action.type) {
-        case OPTION_CHANGED:
-
-            let newSelectedOptions = Object.assign({}, state.scoreBoard.selectedOptions);
+        case OPTION_CHANGED: {
+            const newSelectedOptions = Object.assign({}, state.scoreBoard.selectedOptions);
             newSelectedOptions[action.payload.category] = {
                 option: action.payload.option,
                 points: action.payload.points
             };
 
-            let newSelectedTabIndex = (state.selectedTabIndex + 1) <= (quiz_data.length - 1) ? (state.selectedTabIndex + 1) : (quiz_data.length - 1);
+            const newSelectedTabIndex = (state.selectedTabIndex + 1) <= (quiz_data.length - 1)
+                ? (state.selectedTabIndex + 1)
+                : (quiz_data.length - 1);
 
-            let newTotal = Object.keys(newSelectedOptions).reduce((accumulator, value) => {
-                return accumulator += newSelectedOptions[value].points;
-            }, 0);
-
-            let message = action.payload.points > 0 ? `${action.payload.points} points added to your total score` : '';
+            const result = scorePointsTest(newSelectedOptions);
+            const message = alertMessageForSelection(action.payload, result);
 
             return {
                 ...state,
                 selectedTabIndex: newSelectedTabIndex,
-                scoreBoard: { ...state.scoreBoard, points: newTotal, selectedOptions: newSelectedOptions },
+                scoreBoard: {
+                    ...state.scoreBoard,
+                    points: result.pathwayScores[189],
+                    pathwayScores: result.pathwayScores,
+                    warnings: result.warnings,
+                    selectedOptions: newSelectedOptions
+                },
                 alertMessage: message
-            }
+            };
+        }
         case DARKMODE_CHANGED:
             return { ...state, darkMode: action.payload };
         case SELECTEDCATEGORYTAB_CHANGED:
@@ -47,21 +60,20 @@ export function appReducer(state = initialState, action) {
     }
 }
 
-// selectors
 export const getTotalPoints = (state) => state.app.scoreBoard.points;
+export const getPathwayScores = (state) => state.app.scoreBoard.pathwayScores || { 189: 0, 190: 5, 491: 15 };
+export const getScoreWarnings = (state) => state.app.scoreBoard.warnings || [];
 export const getData = (state) => state.app.data;
 export const getDarkModePreference = (state) => state.app.darkMode;
 export const getSelectedOptions = (state) => state.app.scoreBoard.selectedOptions;
 export const getSelectedTabIndex = (state) => state.app.selectedTabIndex;
 export const getAlertMessage = (state) => state.app.alertMessage;
 
-// action types
 export const OPTION_CHANGED = "app/optionChanged";
 export const DARKMODE_CHANGED = "app/darkModeChanged";
 export const SELECTEDCATEGORYTAB_CHANGED = "app/selectedCategoryTabChanged";
 export const ALERTMESSAGE_CLOSED = "app/AlertMessageClosed";
 
-// action creators
 export const selectOption = (option) => ({
     type: OPTION_CHANGED,
     payload: option

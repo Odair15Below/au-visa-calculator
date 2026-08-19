@@ -26,8 +26,11 @@ const renderIcon = (param) => {
       return <WorkOutlinedIcon />;
     case 'educational qualifications':
       return <SchoolOutlinedIcon />;
+    case 'australian study requirement':
     case 'australian educational qualification':
       return <LocalLibraryOutlinedIcon />;
+    case 'regional study':
+      return <AssignmentOutlinedIcon />;
     case 'specialist educational qualification':
       return <CollectionsBookmarkOutlinedIcon />;
     case 'accredited community language':
