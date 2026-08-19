@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/au-visa-calculator/static/js/main.f621f348.chunk.js",
-    "main.js.map": "/au-visa-calculator/static/js/main.f621f348.chunk.js.map",
+    "main.js": "/au-visa-calculator/static/js/main.d4282a65.chunk.js",
+    "main.js.map": "/au-visa-calculator/static/js/main.d4282a65.chunk.js.map",
     "runtime-main.js": "/au-visa-calculator/static/js/runtime-main.b3fbd1f8.js",
     "runtime-main.js.map": "/au-visa-calculator/static/js/runtime-main.b3fbd1f8.js.map",
-    "static/js/2.70128bfa.chunk.js": "/au-visa-calculator/static/js/2.70128bfa.chunk.js",
-    "static/js/2.70128bfa.chunk.js.map": "/au-visa-calculator/static/js/2.70128bfa.chunk.js.map",
+    "static/js/2.784713c3.chunk.js": "/au-visa-calculator/static/js/2.784713c3.chunk.js",
+    "static/js/2.784713c3.chunk.js.map": "/au-visa-calculator/static/js/2.784713c3.chunk.js.map",
     "static/js/3.bf2e7aef.chunk.js": "/au-visa-calculator/static/js/3.bf2e7aef.chunk.js",
     "static/js/3.bf2e7aef.chunk.js.map": "/au-visa-calculator/static/js/3.bf2e7aef.chunk.js.map",
     "index.html": "/au-visa-calculator/index.html",
-    "static/js/2.70128bfa.chunk.js.LICENSE.txt": "/au-visa-calculator/static/js/2.70128bfa.chunk.js.LICENSE.txt",
+    "static/js/2.784713c3.chunk.js.LICENSE.txt": "/au-visa-calculator/static/js/2.784713c3.chunk.js.LICENSE.txt",
     "static/media/australia.5b0eda20.png": "/au-visa-calculator/static/media/australia.5b0eda20.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b3fbd1f8.js",
-    "static/js/2.70128bfa.chunk.js",
-    "static/js/main.f621f348.chunk.js"
+    "static/js/2.784713c3.chunk.js",
+    "static/js/main.d4282a65.chunk.js"
   ]
 }
